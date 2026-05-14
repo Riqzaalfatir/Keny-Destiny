@@ -9,3 +9,8 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+html, body {
+  background-color: #F7F4EF;
+}
+

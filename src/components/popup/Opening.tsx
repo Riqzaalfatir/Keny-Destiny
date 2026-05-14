@@ -1,0 +1,80 @@
+"use client";
+import Image from "next/image";
+
+type Props = {
+  setStart: (val: boolean) => void;
+};
+
+export default function Opening({ setStart }: Props) {
+  return (
+    <section className="fixed inset-0 z-[9998] flex items-center justify-center bg-[#F7F4EF]">
+      <div className="flex flex-col items-center justify-center text-center">
+        <h2 className="font-quattrocento text-[14px] lg:text-[20px] text-[#37546B] uppercase">
+          The Engagement of
+        </h2>
+
+        <h1 className="font-newscript text-[42px] lg:text-[46px] text-[#37546B] leading-none mt-[22px]">
+          D<span className="font-newserif">ESTINY</span>
+          <span className="text-[18px] lg:text-[22px]">and</span>
+          <br />
+          <span className="ml-[90px]">
+            K<span className="font-newserif">ENNY</span>
+          </span>
+        </h1>
+
+        <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] mt-[27px]">
+          Dear Mr. /Mrs. / Ms.
+        </p>
+        <p className="font-quattrocento text-[16px] lg:text-[20px] text-[#37546B] mt-[21px]">
+          Sela.
+        </p>
+
+        <div className="relative  w-[390px] min-w-[390px] h-[260px] lg:w-[580px] lg:min-w-[580px] -mt-6 lg:mt-10">
+          <Image
+            src="/images/Opening/Amplop.svg"
+            alt="Amplop"
+            width={411}
+            height={411}
+            priority
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 cursor-pointer w-[272px] lg:w-[411px]"
+            onClick={() => setStart(true)}
+          />
+
+          <Image
+            src="/images/Opening/Emblem.svg"
+            alt="Amplop"
+            width={113}
+            height={113}
+            priority
+            className="absolute bottom-14 lg:bottom-24 left-1/2 -translate-x-1/2 pointer-events-none w-[74px] lg:w-[113px]"
+          />
+
+          <Image
+            src="/images/Opening/BUNGAKIRIHD.png"
+            alt=""
+            width={197}
+            height={255}
+            priority
+            className="absolute -bottom-2 left-2 z-[3] w-[130px] lg:w-[197px]"
+          />
+
+          <Image
+            src="/images/Opening/BUNGAKANANHD.png"
+            alt=""
+            width={225}
+            height={275}
+            priority
+            className="absolute bottom-1 right-5 z-[3] w-[144px] lg:w-[225px]"
+          />
+        </div>
+
+        <a
+          onClick={() => setStart(true)}
+          className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] -mt-8"
+        >
+          click the envelope to open
+        </a>
+      </div>
+    </section>
+  );
+}

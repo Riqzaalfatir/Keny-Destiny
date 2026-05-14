@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Quattrocento } from "next/font/google";
+import { Quattrocento, Noto_Sans } from "next/font/google";
 import { newIconSerif, newIconScript } from "@/fonts";
 import "./globals.css";
 
@@ -9,6 +9,10 @@ const quattrocento = Quattrocento({
   variable: "--font-quattrocento",
 });
 
+const notoSans = Noto_Sans({
+  subsets: ["latin"],
+  variable: "--font-noto",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${quattrocento.variable} ${newIconSerif.variable}  ${newIconScript.variable}
+    <html lang="en" className={`${quattrocento.variable} ${newIconSerif.variable}  ${newIconScript.variable} ${notoSans.variable}
  `}>
       <body>{children}</body>
     </html>

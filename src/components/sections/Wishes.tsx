@@ -16,7 +16,9 @@ const Wishes = () => {
   const [pesan, setPesan] = useState<string>("");
   const [showPopup, setShowPopup] = useState<boolean>(false);
   const [showAll, setShowAll] = useState<boolean>(false);
-  const [selectedMessage, setSelectedMessage] = useState<PesanItem | null>(null);
+  const [selectedMessage, setSelectedMessage] = useState<PesanItem | null>(
+    null,
+  );
   const [pesanList, setPesanList] = useState<PesanItem[]>(dummyPesan);
 
   const handleSubmit = (): void => {
@@ -86,11 +88,16 @@ const Wishes = () => {
               </button>
 
               {/* PESAN */}
-              <div
+              {/* <div
                 className={`w-full ${
                   showAll
                     ? "bg-transparent"
                     : "bg-[#37546B] rounded-2xl h-[329px] overflow-y-auto scrollbar-hide"
+                }`}
+              > */}
+              <div
+                className={`w-full rounded-2xl h-[329px] overflow-y-auto scrollbar-hide ${
+                  showAll ? "bg-transparent rounded-none" : "bg-[#37546B]"
                 }`}
               >
                 {!showAll ? (

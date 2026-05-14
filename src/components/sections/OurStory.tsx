@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const OurStory = () => {
   return (
-    <section className="bg-[#F7F4EF]">
-      <div className="max-w-7xl mx-auto px-4 overflow-x-hidden">
+    <section id="story" className="bg-[#F7F4EF] z-20">
+      <div className="max-w-7xl mx-auto px-2 overflow-x-hidden">
         <div className="flex flex-col items-center justify-center pt-[84px] pb-[86px] gap-[72px]">
           <div className="text-center">
-            <h1 className="font-newserif text-[24px] text-[#37546B] tracking-wide leading-none">
+            <h1 className="font-newserif text-[24px] lg:text-[46px] text-[#37546B] tracking-wide leading-none">
               OUR
               <br />
               <span className="font-newscript">L</span>OVE STORY
             </h1>
             <div className="mt-[35px] flex flex-col items-center justify-center gap-[20px]">
-              <p className="font-quattrocento text-[12px] text-[#37546B]">
+              <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
                 They say love finds you when you least expect it — and for
                 <br />
                 us, it began somewhere between coffee conversations
@@ -31,7 +31,7 @@ const OurStory = () => {
                 easy.
               </p>
 
-              <p className="font-quattrocento text-[12px] text-[#37546B]">
+              <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
                 As our friendship grew, it revealed something deeper —<br />
                 shared values, shared prayers, and dreams that seemed to
                 <br />
@@ -47,7 +47,7 @@ const OurStory = () => {
                 gently led us toward each other.
               </p>
 
-              <p className="font-quattrocento text-[12px] text-[#37546B]">
+              <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
                 Somehow, God brought together two people who weren’t
                 <br />
                 even looking for love and turned them into best friends

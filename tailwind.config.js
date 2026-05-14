@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        noto: ["var(--font-noto)"],
         quattrocento: ["var(--font-quattrocento)"],
         newserif: ["var(--font-new-icon-serif)"],
         newscript: ["var(--font-new-icon-script)"],
