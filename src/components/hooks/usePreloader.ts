@@ -20,6 +20,7 @@ const IMAGES_TO_PRELOAD = [
   "/images/OurStory/CouplePas2.webp",
   "/images/OurStory/CouplePas3.webp",
   "/images/ThankYou/BgThankYou.webp",
+  "/images/Hero/BungaBelakang.webp",
   // tambah gambar lain sesuai project
 
   "/images/Opening/Amplop.svg",

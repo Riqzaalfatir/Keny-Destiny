@@ -36,9 +36,9 @@ export default function Opening({ setStart }: Props) {
             </span>
             <span className="text-[18px] lg:text-[22px] ml-1">and</span>
             <br />
-            <span className="ml-[62px] lg:ml-[75px]">
+            <span className="ml-[59px] lg:ml-[75px]">
               K
-              <span className="font-newserif text-[36px] lg:text-[46px]">
+              <span className="font-newserif text-[36px] lg:text-[46px] -ml-1">
                 ENNY
               </span>
             </span>
@@ -59,7 +59,7 @@ export default function Opening({ setStart }: Props) {
           </p>
         </motion.div>
 
-        <div className="relative  w-[390px] min-w-[390px] h-[260px] lg:w-[580px] lg:min-w-[580px] -mt-[29px] lg:mt-[90px]">
+        <div className="relative  w-[390px] min-w-[390px] h-[260px] lg:w-[580px] lg:min-w-[580px] -mt-[29px] lg:mt-[95px]">
           <motion.div
             variants={fadeIn}
             initial="hidden"
@@ -121,7 +121,7 @@ export default function Opening({ setStart }: Props) {
               width={225}
               height={275}
               priority
-              className="absolute bottom-1 lg:-bottom-2 right-5 lg:right-[11px] z-[3] w-[144px] lg:w-[225px]"
+              className="absolute bottom-1 lg:-bottom-2 right-5 lg:right-[8px] z-[3] w-[144px] lg:w-[225px]"
             />
           </motion.div>
         </div>
@@ -131,10 +131,11 @@ export default function Opening({ setStart }: Props) {
             initial="hidden"
             animate="show"
             transition={{ duration: 2.2, ease: "easeIn", delay: 0.6 }}
+            className="-mt-10 lg:-mt-[57px]"
           >
         <a
           onClick={() => setStart(true)}
-          className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] -mt-8 lg:-mt-[45px]"
+          className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]"
         >
           click the envelope to open
         </a>

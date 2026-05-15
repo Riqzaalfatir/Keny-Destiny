@@ -36,16 +36,16 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[164px] right-[37px] w-[130px] lg:w-[223px]"
+          className="absolute top-[164px] right-[37px] lg:top-[280px] lg:right-[20px] w-[130px] lg:w-[223px]"
         >
-          <Image src="/images/Hero/BungaBelakang.png" alt="Bunga Belakang" width={223} height={223} className="w-full" />
+          <Image src="/images/Hero/BungaBelakang.webp" alt="Bunga Belakang" width={223} height={223} className="w-full" />
         </motion.div>
 
         {/* BUNGA MAWAR */}
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[200px] right-[33px] lg:top-[342px] lg:right-[-10px] z-[4] w-[138px] lg:w-[237px]"
+          className="absolute top-[200px] right-[33px] lg:top-[342px] lg:right-[15px] z-[4] w-[138px] lg:w-[237px]"
         >
           <Image src="/images/Hero/Bungamawar.svg" alt="Bunga Mawar" width={237} height={237} className="w-full" />
         </motion.div>
@@ -54,7 +54,7 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[236px] right-[90px] lg:top-[396px] lg:right-[90px] z-[8] w-[59px] lg:w-[100px]"
+          className="absolute top-[236px] right-[90px] lg:top-[405px] lg:right-[112px] z-[8] w-[59px] lg:w-[100px]"
         >
           <Image src="/images/Hero/BungaMawarKecil.svg" alt="Bunga Mawar Kecil" width={100} height={99} className="w-full" />
         </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[264px] lg:top-[455px] right-[45px] lg:right-[9px] z-[7]"
+          className="absolute top-[264px] lg:top-[455px] right-[45px] lg:right-[33px] z-[7]"
         >
           <Image src="/images/Hero/OrnamentKotak.svg" alt="Ornament Kotak" width={268} height={181} className="w-[156px] lg:w-[268px]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center leading-[13px] lg:leading-[24px]">
@@ -106,7 +106,7 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[360px] right-[20px] lg:top-[622px] lg:right-[-35px] z-[7] pointer-events-none"
+          className="absolute top-[360px] right-[20px] lg:top-[622px] lg:right-[-25px] z-[7] pointer-events-none"
         >
           <Image src="/images/Hero/OrnamentDetails.svg" alt="Ornament Details" width={397} height={397} className="w-[231px] lg:w-[397px]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -135,7 +135,7 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[556px] lg:top-[953px] left-[90px] lg:left-[130px] z-[6] w-[204px] lg:w-[351px] pointer-events-none"
+          className="absolute top-[556px] lg:top-[957px] left-[90px] lg:left-[130px] z-[6] w-[204px] lg:w-[351px] pointer-events-none"
         >
           <Image src="/images/Hero/OrnamentLingkar.svg" alt="Ornament Lingkar" width={351} height={351} className="w-full" />
         </motion.div>
