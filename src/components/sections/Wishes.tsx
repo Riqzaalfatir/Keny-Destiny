@@ -14,7 +14,7 @@ type PesanItem = {
   pesan: string;
 };
 
-type ModalType = string | null; // ← tambah
+type ModalType = string | null; 
 
 const Wishes = () => {
   const [nama, setNama] = useState<string>("");
@@ -29,7 +29,7 @@ const Wishes = () => {
 
   const handleSubmit = (): void => {
     if (!nama || !pesan) {
-      setModalType("incomplete_wishes"); // ← ganti alert
+      setModalType("incomplete_wishes"); 
       return;
     }
 
@@ -130,14 +130,7 @@ const Wishes = () => {
                 </button>
               </motion.div>
 
-              {/* PESAN */}
-              {/* <div
-                className={`w-full ${
-                  showAll
-                    ? "bg-transparent"
-                    : "bg-[#37546B] rounded-2xl h-[329px] overflow-y-auto scrollbar-hide"
-                }`}
-              > */}
+              
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -176,7 +169,7 @@ const Wishes = () => {
     variants={stagger}
     initial="hidden"
     animate="show"
-      transition={{ staggerChildren: 2.6 }} // ← override stagger di sini
+      transition={{ staggerChildren: 2.6 }}
 
     className="w-full"
   >

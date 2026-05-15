@@ -15,7 +15,6 @@ const gifts: Gift[] = [
     number: "7773222110",
     name: "A/n Petra Destiny Hartanto",
   },
-  // Tambah rekening lain
 ];
 
 const Gift = () => {
@@ -171,7 +170,7 @@ const Gift = () => {
         >
           <a
             href=""
-            className="font-quattrocento underline text-[12px] text-[#37546B]"
+            className="font-quattrocento underline text-[12px] lg:text-[18px] text-[#37546B]"
           >
             Return to envelope
           </a>

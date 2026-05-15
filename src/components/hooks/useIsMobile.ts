@@ -1,4 +1,3 @@
-// hooks/useIsMobile.ts
 import { useEffect, useState } from 'react'
 
 const useIsMobile = (breakpoint: number = 1024) => {

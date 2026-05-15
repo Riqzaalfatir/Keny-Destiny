@@ -1,4 +1,3 @@
-// useAOS.ts — hapus import css dari sini
 "use client";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -12,7 +11,7 @@ export function useAOS() {
       duration: 800,
       easing: "ease-out",
       once: true,
-      offset: 100,      // ← elemen trigger 100px sebelum masuk viewport
+      offset: 100,      
       delay: 0,
       startEvent: "DOMContentLoaded",
     });

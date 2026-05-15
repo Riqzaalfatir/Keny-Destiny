@@ -6,10 +6,6 @@ export const fadeIn: Variants = {
   show: { opacity: 1 }
 }
 
-// export const fadeUp: Variants = {
-//   hidden: { opacity: 0, y: 16 },
-//   show: { opacity: 1, y: 0 }  
-// }
 
 export const fadeUp: Variants = {
   hidden: { opacity: 0, y: 8, translateZ: 0 },
