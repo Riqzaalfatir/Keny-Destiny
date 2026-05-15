@@ -12,7 +12,16 @@
 
 html, body {
   background-color: #F7F4EF;
-    overflow-x: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none;  
+  -ms-overflow-style: none;
+    scroll-behavior: smooth;
 
 }
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
 

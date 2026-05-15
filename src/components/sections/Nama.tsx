@@ -14,8 +14,8 @@ const Nama = () => {
       
       {/* teks paling atas */}
       <div className="relative z-10 flex flex-col items-center justify-center py-[23px] lg:pt-[27px] lg:pb-[23px]">
-        <h2 className='font-newscript text-[14px] lg:text-[20px] text-white/90'>Destiny and Kenny</h2>
-        <p className='font-newserif text-[12px] text-white/90 tracking-widest lg:text-[18px]'>11.07.26</p>
+        <h2 className='font-newscript text-[14px] lg:text-[20px] text-white/80'>Destiny and Kenny</h2>
+        <p className='font-newserif text-[12px] text-white/80 tracking-widest lg:text-[18px]'>11.07.26</p>
       </div>
     </section>
   )

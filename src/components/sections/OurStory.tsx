@@ -5,7 +5,8 @@ const OurStory = () => {
   return (
     <section id="story" className="bg-[#F7F4EF] z-20">
       <div className="max-w-7xl mx-auto px-2 overflow-x-hidden">
-        <div className="flex flex-col items-center justify-center pt-[84px] pb-[86px] gap-[72px]">
+        <div className="flex flex-col items-center justify-center pt-[84px] pb-[86px] lg:pt-[105px] lg:pb-[73px] gap-[62px] lg:gap-[57px]">
+
           <div className="text-center">
             <h1 className="font-newserif text-[24px] lg:text-[46px] text-[#37546B] tracking-wide leading-none">
               OUR
@@ -13,140 +14,144 @@ const OurStory = () => {
               <span className="font-newscript">L</span>OVE STORY
             </h1>
             <div className="mt-[35px] flex flex-col items-center justify-center gap-[20px]">
+
               <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
-                They say love finds you when you least expect it — and for
-                <br />
-                us, it began somewhere between coffee conversations
-                <br />
-                and rounds of golf. What started as easy laughter and
-                <br />
-                simple moments slowly became something neither of us
-                <br />
-                planned for. Before we knew it, casual chats turned into
-                <br />
-                long video calls across thousands of miles, where time
-                <br />
-                zones no longer mattered and goodbyes were never quite
-                <br />
+                They say love finds you when you least expect it — and for <br className="block lg:hidden" />
+                us, it began <br className="hidden lg:block" />
+                somewhere between coffee conversations <br className="block lg:hidden" />
+                and rounds of golf. What <br className="hidden lg:block" /> 
+                started as easy laughter and <br className="block lg:hidden" />
+                simple moments slowly became <br className="hidden lg:block" />
+                something neither of us <br className="block lg:hidden" />
+                planned for. Before we knew it, casual chats <br className="hidden lg:block" />
+                turned into <br className="block lg:hidden" />
+                long video calls across thousands of miles, where time <br className="block" />
+                zones no longer mattered and goodbyes were never quite <br className="block lg:hidden" />
                 easy.
               </p>
 
               <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
-                As our friendship grew, it revealed something deeper —<br />
-                shared values, shared prayers, and dreams that seemed to
-                <br />
-                fit effortlessly together. Even though our time in the same
-                <br /> place felt brief, there was a quiet peace we couldn’t
-                ignore.
-                <br /> From the very beginning, we sensed that God was writing
-                <br />
-                a story far greater than anything we could have planned.
-                <br />
-                Doors opened, timelines aligned, and step by step, He
-                <br />
-                gently led us toward each other.
+                As our friendship grew, it revealed something deeper — <br className="block lg:hidden" />
+                shared <br className="hidden lg:block" /> 
+                values, shared prayers, and dreams that seemed to <br className="block lg:hidden" />
+                
+                fit effortlessly <br className="hidden lg:block" /> 
+                together. Even though our time in the same <br className="block lg:hidden" />
+                place felt brief, there was <br className="hidden lg:block" /> 
+                a quiet peace we couldn’t ignore. <br className="block lg:hidden" />
+                From the very beginning, we sensed <br className="hidden lg:block" /> 
+                that God was writing <br className="block lg:hidden" />
+                
+                a story far greater than anything we could have <br className="hidden lg:block" /> 
+                planned. <br className="block lg:hidden" />
+                
+                Doors opened, timelines aligned, and step by step, He <br className="block lg:hidden" />
+                
+                gently <br className="hidden lg:block" /> 
+                led us toward each other.
               </p>
 
               <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B]">
-                Somehow, God brought together two people who weren’t
-                <br />
-                even looking for love and turned them into best friends
-                <br /> choosing to walk through life side by side. With
-                laughter, a<br /> little spontaneity, and a whole lot of faith,
-                we continue this
-                <br />
-                journey knowing our story didn’t happen by chance — it
-                <br />
-                was lovingly written by Him all along
+                Somehow, God brought together two people who weren’t <br className="block lg:hidden" />
+                even <br className="hidden lg:block" />
+                looking for love and turned them into best friends <br className="block lg:hidden" />
+                choosing to walk <br className="hidden lg:block" />
+                through life side by side. With laughter, a <br className="block lg:hidden" />
+                little spontaneity, and a <br className="hidden lg:block" />
+                whole lot of faith, we continue this <br className="block lg:hidden" />
+                journey knowing our story didn’t <br className="hidden lg:block" />
+                happen by chance — it <br className="block lg:hidden" />
+                was lovingly written by Him all along.
               </p>
             </div>
           </div>
 
           {/* bagian foto */}
-          <div className="relative w-[390px] min-w-[390px]">
+          <div className="relative w-[390px] min-w-[390px] lg:w-[690px] lg:min-w-[690px]">
 
             <Image
               src="/images/Hero/OrnamentLingkar.svg"
               alt="Bunga Mawar Kecil"
-              width={184}
-              height={184}
-              className="absolute top-[0px] left-[57.82px]"
+              width={266}
+              height={266}
+              className="absolute top-[0px] left-[57.82px] w-[184px] lg:top-[7px] lg:left-[146px] lg:w-[266px]"
             />
+
             <Image
               src="/images/OurStory/CouplePas1.webp"
               alt="Foto 1"
-              width={251}
-              height={251}
-              className="absolute top-[17px] left-[-19px] z-[5]"
+              width={364}
+              height={364}
+              className="absolute top-[17px] left-[-19px] lg:top-[32px] lg:left-[35px] z-[5] w-[251px] lg:w-[364px]"
             />
 
             <Image
               src="/images/OurStory/CouplePas2.webp"
               alt="Foto 2"
-              width={225}
-              height={225}
-              className="absolute top-[-17px] right-[-17px] z-[3]"
+              width={326}
+              height={326}
+              className="absolute top-[-17px] right-[-17px] lg:top-[-17px] lg:right-[36px] z-[3] w-[225px] lg:w-[326px]"
             />
 
             <Image
               src="/images/OurStory/CouplePas3.webp"
               alt="Foto 3"
-              width={230}
-              height={230}
-              className="absolute top-[125px] right-[53px] z-[4]"
+              width={334}
+              height={334}
+              className="absolute top-[125px] right-[53px] lg:top-[188px] lg:right-[137px] z-[4] w-[230px] lg:w-[334px]"
             />
 
             {/* ORNAMENT */}
             <Image
               src="/images/OurStory/Kunci.svg"
               alt="Ornament"
-              width={178}
-              height={178}
-              className="absolute top-[205px] right-[13px] z-[4]"
+              width={258}
+              height={258}
+              className="absolute top-[205px] right-[13px] lg:top-[306px] lg:right-[79px] z-[4] w-[178px] lg:w-[258px]"
             />
 
             <Image
               src="/images/OurStory/Mawar.png"
               alt="Ornament"
-              width={78}
-              height={78}
-              className="absolute top-[279px] left-[120px] z-[4]"
+              width={114}
+              height={114}
+              className="absolute top-[279px] left-[120px] lg:top-[410px] lg:left-[235px] z-[4] w-[78px] lg:w-[114px]"
             />
 
             <Image
               src="/images/OurStory/BungaHijau.svg"
               alt="Ornament"
-              width={45}
-              height={45}
-              className="absolute top-[308px] left-[165px] z-[4]"
+              width={66}
+              height={66}
+              className="absolute top-[308px] left-[165px] lg:top-[455px] lg:left-[301px] z-[4] w-[45px] lg:w-[66px]"
             />
 
             <Image
               src="/images/OurStory/Ranting.webp"
               alt="Ornament"
-              width={111}
-              height={111}
-              className="absolute top-[206px] left-[95px]"
+              width={161}
+              height={161}
+              className="absolute top-[206px] left-[95px] lg:top-[310px] lg:left-[198px] w-[111px] lg:w-[161px]"
             />
 
             <Image
               src="/images/OurStory/MawarBiruKanan.svg"
               alt="Ornament"
-              width={120}
-              height={120}
-              className="absolute top-[95px] right-[2px] z-[4]"
+              width={184}
+              height={184}
+              className="absolute top-[95px] right-[2px] lg:top-[135px] lg:right-[53px] z-[4] w-[127px] lg:w-[184px]"
             />
 
             <Image
               src="/images/OurStory/MawarBiruTengahAtas.svg"
               alt="Ornament"
-              width={154}
-              height={154}
-              className="absolute top-[10px] right-[118px] z-[6]"
+              width={224}
+              height={224}
+              className="absolute top-[10px] right-[118px] lg:top-[23px] lg:right-[232px] z-[6] w-[154px] lg:w-[224px]"
             />
 
             {/* spacer sesuai tinggi area foto */}
-            <div className="h-[350px]" />
+            <div className="h-[350px] lg:h-[570px]" />
           </div>
         </div>
       </div>

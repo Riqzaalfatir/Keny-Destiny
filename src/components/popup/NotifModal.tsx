@@ -133,6 +133,15 @@ export const NOTIF_CONFIG: Record<string, NotifConfigItem> = {
       "Your response has been received. Thank you for your confirmation. We appreciate your response.",
     buttons: [{ label: "Close", variant: "outline", action: "close" }],
   },
+  incomplete_wishes: {
+  icon: "!",
+  title: "INCOMPLETE WISHES",
+  messageid:
+    "Mohon lengkapi nama dan pesan sebelum mengirim. Beberapa informasi masih belum terisi.",
+  messageen:
+    "Please fill in your name and message before sending. Some required information is still missing.",
+  buttons: [{ label: "Close", variant: "outline", action: "close" }],
+},
 };
 
 const WaIcon = () => (

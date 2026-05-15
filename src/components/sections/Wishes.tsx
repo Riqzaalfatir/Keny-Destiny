@@ -4,12 +4,17 @@ import { dummyPesan } from "@/components/data/wishes";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import WishesCard from "@/components/popup/WishesCard";
+import NotifModal from "@/components/popup/NotifModal"; // ← tambah
+
 
 type PesanItem = {
   id: number;
   nama: string;
   pesan: string;
 };
+
+type ModalType = string | null; // ← tambah
+
 
 const Wishes = () => {
   const [nama, setNama] = useState<string>("");
@@ -20,10 +25,12 @@ const Wishes = () => {
     null,
   );
   const [pesanList, setPesanList] = useState<PesanItem[]>(dummyPesan);
+  const [modalType, setModalType] = useState<ModalType>(null); // ← tambah
+
 
   const handleSubmit = (): void => {
     if (!nama || !pesan) {
-      alert("Please fill in all fields");
+      setModalType("incomplete_wishes"); // ← ganti alert
       return;
     }
 
@@ -52,12 +59,12 @@ const Wishes = () => {
 
   return (
     <>
-      <section className="relative w-full flex flex-col items-center px-8 bg-[#F7F4EF] pt-[61px] pb-[87px]">
-        <div className="max-w-[284px] mx-auto">
-          <div className="flex flex-col items-center">
-            <h2 className="uppercase font-newscript text-[24px] text-[#37546B] tracking-wide">
+      <section className="relative w-full flex flex-col items-center px-8 bg-[#F7F4EF] pt-[61px] lg:pt-[100px] pb-[87px] lg:pb-[132px]">
+          <h2 className="uppercase font-newscript text-[24px] lg:text-[46px] text-[#37546B] tracking-wide">
               Y<span className="font-newserif">OUR WISHES</span>
             </h2>
+        <div className="max-w-[284px] lg:max-w-[564px] mx-auto">
+          <div className="flex flex-col items-center">
 
             <div className="w-full flex flex-col gap-[20px] mt-[40px]">
               <input
@@ -65,24 +72,24 @@ const Wishes = () => {
                 value={nama}
                 placeholder="Desy (Tester)"
                 onChange={(e) => setNama(e.target.value)}
-                className="w-full text-[#37546B] font-quattrocento border-[1px] text-[12px] bg-transparent border-[#37546B]/50 px-[12px] h-[33px] rounded-full outline-none placeholder:text-[#37546B]/50"
+                className="w-full text-[#37546B] font-quattrocento border-[1px] text-[12px] lg:text-[18px]  bg-transparent border-[#37546B]/50 px-[13px] lg:px-[23px] h-[33px] lg:h-[40px] rounded-full outline-none placeholder:text-[#37546B]/50"
               />
               <textarea
                 value={pesan}
                 onChange={(e) => setPesan(e.target.value)}
-                className="w-full text-[#37546B] font-quattrocento border-[1px] text-[12px] bg-transparent border-[#37546B]/50 px-[12px] h-[60px] rounded-xl outline-none placeholder:text-[#37546B]/50 resize-none"
+                className="w-full text-[#37546B] font-quattrocento border-[1px] text-[12px] lg:text-[18px] bg-transparent border-[#37546B]/50 px-[13px] lg:px-[23px] h-[60px] lg:h-[261px] rounded-xl outline-none placeholder:text-[#37546B]/50 resize-none"
               />
 
               <button
                 onClick={handleSubmit}
-                className="bg-[#37546B] hover:bg-[#2E4559] active:bg-[#243545] transition-colors duration-200 rounded-full h-[33px] text-[12px] font-quattrocento uppercase flex items-center justify-center gap-1.5 text-[#DADAD9]"
+                className="bg-[#37546B] hover:bg-[#2E4559] active:bg-[#243545] transition-colors duration-200 rounded-full h-[33px] lg:h-[40px] text-[12px] lg:text-[18px] font-quattrocento uppercase flex items-center justify-center gap-1.5 lg:gap-2 text-[#DADAD9]"
               >
                 <Image
                   src="/images/Wishes/Panah.svg"
                   alt="Kirim"
-                  width={15}
-                  height={19}
-                  className="object-cover w-[15px] h-[19px]"
+                  width={24}
+                  height={30}
+                  className="object-cover w-[15px] h-[19px] lg:w-[24px]"
                 />
                 Send
               </button>
@@ -96,20 +103,20 @@ const Wishes = () => {
                 }`}
               > */}
               <div
-                className={`w-full rounded-2xl h-[329px] overflow-y-auto scrollbar-hide ${
+                className={`w-full rounded-2xl h-[329px] lg:h-[526px] overflow-y-auto scrollbar-hide mt-[15px] ${
                   showAll ? "bg-transparent rounded-none" : "bg-[#37546B]"
                 }`}
               >
                 {!showAll ? (
                   <div>
                     <div className="sticky top-0 w-full h-[18px] bg-[#37546B] z-10" />
-                    <div className="px-[15px] py-[2px]">
+                    <div className="px-[13px] lg:px-[23px] py-[2px]">
                       {pesanList.slice(0, 8).map((item, index, array) => (
                         <div key={item.id}>
-                          <p className="text-[#DADAD9] font-quattrocento text-[12px] font-bold mb-[4px]">
+                          <p className="text-[#DADAD9] font-quattrocento text-[12px] lg:text-[18px] font-bold mb-[4px] lg:mb-[12px]">
                             {item.nama}
                           </p>
-                          <p className="text-[#DADAD9] font-quattrocento text-[12px] tracking-[0.5px]">
+                          <p className="text-[#DADAD9] font-quattrocento text-[12px] lg:text-[18px] tracking-[0.5px] mb-[10px]">
                             {item.pesan}
                           </p>
                           {index !== array.length - 1 && (
@@ -133,12 +140,12 @@ const Wishes = () => {
                             <p className="absolute top-[8px] left-[10px] text-[22px] font-bold font-quattrocento text-[#37546B]">
                               "
                             </p>
-                            <p className="font-quattrocento text-[12px] text-[#37546B] text-center mt-6 mb-2 line-clamp-4">
+                            <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] text-center mt-6 mb-2 line-clamp-4">
                               {item.pesan}
                             </p>
                           </div>
                           <div className="bg-[#37546B] h-[35px] flex items-center justify-center px-6">
-                            <p className="text-white text-center line-clamp-1 text-[13px] font-quattrocento">
+                            <p className="text-white text-center line-clamp-1 text-[13px] lg:text-[19px] font-quattrocento">
                               {item.nama}
                             </p>
                           </div>
@@ -156,14 +163,14 @@ const Wishes = () => {
 
               <button
                 onClick={() => setShowAll(!showAll)}
-                className="bg-[#37546B] hover:bg-[#2E4559] active:bg-[#243545] transition-colors duration-200 rounded-full h-[33px] text-[12px] font-quattrocento uppercase flex items-center justify-center gap-1.5 text-[#DADAD9]"
+                className="bg-[#37546B] hover:bg-[#2E4559] active:bg-[#243545] transition-colors duration-200 rounded-full h-[33px] lg:h-[40px] text-[12px] font-quattrocento lg:text-[18px] uppercase flex items-center justify-center gap-1.5 lg:gap-2 text-[#DADAD9]"
               >
                 <Image
                   src="/images/Wishes/Pesan.svg"
                   alt="Pesan"
-                  width={18}
-                  height={20}
-                  className="object-cover w-[15px] h-[19px]"
+                  width={20}
+                  height={25}
+                  className="object-cover w-[15px] h-[19px] lg:w-[20px]"
                 />
                 {showAll ? "BACK" : "VIEW ALL MESSAGES"}
               </button>
@@ -193,6 +200,16 @@ const Wishes = () => {
           </div>
         )}
       </section>
+
+       {/* NOTIF MODAL — untuk incomplete_wishes */}
+      {modalType && (
+        <NotifModal
+          type={modalType}
+          onClose={() => setModalType(null)}
+          onConfirm={() => setModalType(null)}
+          waNumber="6281234567890"
+        />
+      )}
     </>
   );
 };

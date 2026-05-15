@@ -7,29 +7,31 @@ type Props = {
 
 export default function Opening({ setStart }: Props) {
   return (
-    <section className="fixed inset-0 z-[9998] flex items-center justify-center bg-[#F7F4EF]">
+    <section className="fixed inset-0 z-[9998] flex items-center justify-center bg-[#F7F4EF] ">
       <div className="flex flex-col items-center justify-center text-center">
         <h2 className="font-quattrocento text-[14px] lg:text-[20px] text-[#37546B] uppercase">
           The Engagement of
         </h2>
 
-        <h1 className="font-newscript text-[42px] lg:text-[46px] text-[#37546B] leading-none mt-[22px]">
-          D<span className="font-newserif">ESTINY</span>
-          <span className="text-[18px] lg:text-[22px]">and</span>
+        <h1 className="font-newscript text-[42px] lg:text-[46px] text-[#37546B] leading-none mt-[22px] lg:mt-[20px]">
+          D<span className="font-newserif text-[36px] lg:text-[46px]">ESTINY</span>
+          <span className="text-[18px] lg:text-[22px] ml-1">and</span>
           <br />
-          <span className="ml-[90px]">
-            K<span className="font-newserif">ENNY</span>
+          <span className="ml-[62px] lg:ml-[75px]">
+            K<span className="font-newserif text-[36px] lg:text-[46px]">ENNY</span>
           </span>
         </h1>
 
-        <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] mt-[27px]">
+        <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] mt-[20px]">
           Dear Mr. /Mrs. / Ms.
         </p>
-        <p className="font-quattrocento text-[16px] lg:text-[20px] text-[#37546B] mt-[21px]">
+        <p className="font-quattrocento text-[16px] lg:text-[20px] text-[#37546B] mt-[21px] lg:mt-[14px]">
           Sela.
         </p>
 
-        <div className="relative  w-[390px] min-w-[390px] h-[260px] lg:w-[580px] lg:min-w-[580px] -mt-6 lg:mt-10">
+
+
+        <div className="relative  w-[390px] min-w-[390px] h-[260px] lg:w-[580px] lg:min-w-[580px] -mt-[29px] lg:mt-[90px]">
           <Image
             src="/images/Opening/Amplop.svg"
             alt="Amplop"
@@ -46,7 +48,7 @@ export default function Opening({ setStart }: Props) {
             width={113}
             height={113}
             priority
-            className="absolute bottom-14 lg:bottom-24 left-1/2 -translate-x-1/2 pointer-events-none w-[74px] lg:w-[113px]"
+            className="absolute bottom-14 lg:bottom-20 left-1/2 -translate-x-1/2 pointer-events-none w-[74px] lg:w-[113px]"
           />
 
           <Image
@@ -55,7 +57,7 @@ export default function Opening({ setStart }: Props) {
             width={197}
             height={255}
             priority
-            className="absolute -bottom-2 left-2 z-[3] w-[130px] lg:w-[197px]"
+            className="absolute -bottom-2 lg:-bottom-3 left-2 z-[3] w-[130px] lg:w-[197px]"
           />
 
           <Image
@@ -64,13 +66,13 @@ export default function Opening({ setStart }: Props) {
             width={225}
             height={275}
             priority
-            className="absolute bottom-1 right-5 z-[3] w-[144px] lg:w-[225px]"
+            className="absolute bottom-1 lg:-bottom-2 right-5 lg:right-[11px] z-[3] w-[144px] lg:w-[225px]"
           />
         </div>
 
         <a
           onClick={() => setStart(true)}
-          className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] -mt-8"
+          className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] -mt-8 lg:-mt-[45px]"
         >
           click the envelope to open
         </a>

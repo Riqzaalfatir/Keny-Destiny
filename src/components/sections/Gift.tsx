@@ -32,36 +32,36 @@ const handleCopy = (number: string, index: number): void => {
       className="relative w-full flex items-start justify-center  bg-[#F7F4EF]"
     >
       {/* Konten */}
-      <div className="relative z-10 flex flex-col items-center text-center pb-[39px]">
-        <h2 className="uppercase font-newscript text-[24px] text-[#37546B] tracking-wide">
+      <div className="relative z-10 flex flex-col items-center text-center pb-[39px] lg:pb-[40px]">
+        <h2 className="uppercase font-newscript text-[24px] lg:text-[46px] text-[#37546B] tracking-wide">
           W<span className="font-newserif">EDDING GIFT</span>
         </h2>
 
-        <p className="text-[12px] font-quattrocento text-[#37546B] mt-[35px] tracking-wide leading-relaxed">
+        <p className="text-[12px] lg:text-[18px] font-quattrocento text-[#37546B] mt-[35px] lg:mt-[43px] tracking-wide leading-relaxed">
          Your presence and prayers<br />
          are the greatest blessing to us.<br />
         </p>
 
-        <p className="text-[12px] font-quattrocento text-[#37546B] tracking-wide mt-[12px] leading-relaxed">
+        <p className="text-[12px] lg:text-[18px] font-quattrocento text-[#37546B] tracking-wide mt-[12px] lg:mt-[18px] leading-relaxed">
 Should you wish to honor us with a gift,<br />
 please find the details below<br />
 for your convenience.<br />
         </p>
 
         {/* List rekening */}
-        <div className="w-full max-w-[224px] flex flex-col gap-6 mt-[35px]">
+        <div className="w-full max-w-[224px] lg:max-w-[368px] flex flex-col gap-6 mt-[35px] lg:mt-[45px]">
           {gifts.map((gift, index) => (
             <div key={index} className="w-full">
               {/* Info bank */}
               <div className="flex items-center justify-between">
                 <div className="text-left">
-                  <p className="text-[12px] font-quattrocento text-[#37546B]">
+                  <p className="text-[12px] lg:text-[16px] font-quattrocento text-[#37546B]">
                     {gift.bank}
                   </p>
-                  <p className="text-[12px] font-quattrocento text-[#37546B]">
+                  <p className="text-[12px] lg:text-[16px] font-quattrocento text-[#37546B]">
                     {gift.number}
                   </p>
-                  <p className="text-[12px] font-quattrocento text-[#37546B]">
+                  <p className="text-[12px] lg:text-[16px] font-quattrocento text-[#37546B]">
                     {gift.name}
                   </p>
                 </div>
@@ -69,7 +69,7 @@ for your convenience.<br />
                 {/* Tombol COPY */}
                 <button
                   onClick={() => handleCopy(gift.number, index)}
-                  className="text-[10px] font-quattrocento text-[#37546B] tracking-widest pb-[0.5px] border-b border-[#37546B] transition-opacity hover:opacity-70"
+                  className="text-[10px] lg:text-[16px] font-quattrocento text-[#37546B] tracking-widest pb-[0.5px] border-b border-[#37546B] transition-opacity hover:opacity-70"
                 >
                   {copied === index ? "COPIED!" : "COPY"}
                 </button>
@@ -81,7 +81,7 @@ for your convenience.<br />
           ))}
         </div>
 
-                            <a href="" className='font-quattrocento underline text-[12px] text-[#37546B] mt-[107px]'>Return to envelope</a>
+        <a href="" className='font-quattrocento underline text-[12px] text-[#37546B] mt-[107px] lg:mt-[99px]'>Return to envelope</a>
 
       </div>
     </section>

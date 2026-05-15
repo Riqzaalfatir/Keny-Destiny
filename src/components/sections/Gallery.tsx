@@ -50,7 +50,7 @@ const Gallery = () => {
 
  return (
     <>
-      <section id="gallery" className="w-full h-[626px]">
+      <section id="gallery" className="w-full h-[626px] min-h-[626px] max-h-[626px]  lg:h-[945px] lg:min-h-[945px] lg:max-h-[945px]">
           <div
             className="overflow-hidden w-full h-full"
             ref={emblaRef}
