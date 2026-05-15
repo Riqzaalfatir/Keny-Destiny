@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="w-full pt-[67px] lg:pt-[71px] flex flex-col items-center justify-center overflow-x-hidden bg-[#F7F4EF]"
+      className="w-full pt-[67px] lg:pt-[71px] flex flex-col items-center justify-center  bg-[#F7F4EF]"
     >
       {/* ✅ whileInView HANYA di sini, pakai stagger */}
       <motion.div
-        className="relative w-[390px] min-w-[390px] lg:w-[590px] lg:min-w-[590px]"
+        className="relative w-[390px] min-w-[390px] lg:w-[590px] lg:min-w-[590px] overflow-x-hidden"
         variants={stagger}
         initial="hidden"
         whileInView="show"
