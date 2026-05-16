@@ -13,7 +13,7 @@ const IMAGES_TO_PRELOAD = [
   "/images/Hero/OrnamentKindly.svg",
   "/images/Hero/PasFoto1.svg",
   "/images/Hero/PasFoto2.svg",
-  "/images/Hero/OrnamentmawarKanan.svg",
+  "/images/Hero/OrnamentmawarKanann.png",
   "/images/Hero/MawarBiru.svg",
   "/images/Hero/OrnamentK.svg",
   "/images/OurStory/CouplePas1.webp",
