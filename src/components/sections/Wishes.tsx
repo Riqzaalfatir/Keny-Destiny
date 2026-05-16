@@ -122,7 +122,7 @@ const Wishes = () => {
                     alt="Kirim"
                     width={24}
                     height={30}
-                    className="object-contain w-[17px] lg:w-[24px]"
+                    className="object-contain w-[17px] lg:w-[22px]"
                   />
                   Send
                 </button>

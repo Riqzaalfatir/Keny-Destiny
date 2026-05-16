@@ -182,9 +182,9 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
-          className="absolute top-[623px] left-[182px] lg:top-[1070px] lg:left-[280px] z-[9] w-[78px] lg:w-[135px] pointer-events-none"
+          className="absolute top-[615px] left-[182px] lg:top-[1060px] lg:left-[280px] z-[9] w-[163px] lg:w-[280px] pointer-events-none"
         >
-          <Image src="/images/Hero/OrnamentmawarKanan.svg" alt="Ornament Mawar Kanan" width={133} height={267} className="w-full" />
+          <Image src="/images/Hero/OrnamentmawarKanann.png" alt="Ornament Mawar Kanan" width={280} height={267} className="w-full" />
         </motion.div>
 
         {/* KINDLY RSVP */}
