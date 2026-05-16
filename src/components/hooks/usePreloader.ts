@@ -21,6 +21,8 @@ const IMAGES_TO_PRELOAD = [
   "/images/OurStory/CouplePas3.webp",
   "/images/ThankYou/BgThankYou.webp",
   "/images/Hero/BungaBelakang.webp",
+  "/images/Hero/Emblem.svg",
+  "/images/Hero/K.svg",
 
   "/images/Opening/Amplop.svg",
   "/images/Opening/Emblem.svg",

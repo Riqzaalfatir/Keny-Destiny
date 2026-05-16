@@ -131,43 +131,43 @@ const OurStory = () => {
     <Image src="/images/Hero/OrnamentLingkar.svg" alt="Bunga Mawar Kecil" width={266} height={266} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[17px] left-[-19px] lg:top-[32px] lg:left-[35px] z-[5] w-[251px] lg:w-[364px]">
-    <Image src="/images/OurStory/CouplePas1.webp" alt="Foto 1" width={364} height={364} className="w-full" />
+  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[15px] left-[-10px] lg:top-[30px] lg:left-[43px] z-[5] w-[251px] lg:w-[364px]">
+    <Image src="/images/OurStory/Couple1.webp" alt="Foto 1" width={364} height={364} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[-17px] right-[-17px] lg:top-[-17px] lg:right-[36px] z-[3] w-[225px] lg:w-[326px]">
-    <Image src="/images/OurStory/CouplePas2.webp" alt="Foto 2" width={326} height={326} className="w-full" />
+  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[-17px] right-[-10px] lg:top-[-17px] lg:right-[46px] z-[3] w-[225px] lg:w-[326px]">
+    <Image src="/images/OurStory/Couple2.webp" alt="Foto 2" width={326} height={326} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[125px] right-[53px] lg:top-[188px] lg:right-[137px] z-[4] w-[230px] lg:w-[334px]">
-    <Image src="/images/OurStory/CouplePas3.webp" alt="Foto 3" width={334} height={334} className="w-full" />
+  <motion.div variants={fadeIn} transition={{ duration: 1.2, ease: "easeIn" }} className="absolute top-[139px] right-[50px] lg:top-[210px] lg:right-[133px] z-[4] w-[230px] lg:w-[334px]">
+    <Image src="/images/OurStory/Couple3.webp" alt="Foto 3" width={334} height={334} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[205px] right-[13px] lg:top-[306px] lg:right-[79px] z-[4] w-[178px] lg:w-[258px]">
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[218px] right-[10px] lg:top-[328px] lg:right-[75px] z-[4] w-[178px] lg:w-[258px]">
     <Image src="/images/OurStory/Kunci.svg" alt="Ornament" width={258} height={258} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[279px] left-[120px] lg:top-[410px] lg:left-[235px] z-[4] w-[78px] lg:w-[114px]">
-    <Image src="/images/OurStory/Mawar.png" alt="Ornament" width={114} height={114} className="w-full" />
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[290px] left-[125px] lg:top-[435px] lg:left-[245px] z-[4] w-[78px] lg:w-[114px]">
+    <Image src="/images/OurStory/Mawar.svg" alt="Ornament" width={114} height={114} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[308px] left-[165px] lg:top-[455px] lg:left-[301px] z-[4] w-[45px] lg:w-[66px]">
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[322px] left-[170px] lg:top-[480px] lg:left-[310px] z-[4] w-[45px] lg:w-[66px]">
     <Image src="/images/OurStory/BungaHijau.svg" alt="Ornament" width={66} height={66} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[206px] left-[98px] lg:top-[307px] lg:left-[198px] w-[111px] lg:w-[161px]">
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[224px] left-[98px] lg:top-[330px] lg:left-[205px] w-[111px] lg:w-[161px]">
     <Image src="/images/OurStory/Ranting.webp" alt="Ornament" width={161} height={161} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[95px] right-[2px] lg:top-[135px] lg:right-[53px] z-[4] w-[127px] lg:w-[184px]">
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[105px] right-[-12px] lg:top-[165px] lg:right-[42px] z-[4] w-[127px] lg:w-[184px]">
     <Image src="/images/OurStory/MawarBiruKanan.svg" alt="Ornament" width={184} height={184} className="w-full" />
   </motion.div>
 
-  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[10px] right-[118px] lg:top-[23px] lg:right-[232px] z-[6] w-[154px] lg:w-[224px]">
+  <motion.div variants={fadeIn} transition={{ duration: 1, ease: "easeIn" }} className="absolute top-[10px] right-[118px] lg:top-[43px] lg:right-[232px] z-[6] w-[154px] lg:w-[224px]">
     <Image src="/images/OurStory/MawarBiruTengahAtas.svg" alt="Ornament" width={224} height={224} className="w-full" />
   </motion.div>
 
-  <div className="h-[350px] lg:h-[570px]" />
+  <div className="h-[360px] lg:h-[595px]" />
 </motion.div>
 
 

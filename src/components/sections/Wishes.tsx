@@ -14,7 +14,7 @@ type PesanItem = {
   pesan: string;
 };
 
-type ModalType = string | null; 
+type ModalType = string | null;
 
 const Wishes = () => {
   const [nama, setNama] = useState<string>("");
@@ -24,12 +24,17 @@ const Wishes = () => {
   const [selectedMessage, setSelectedMessage] = useState<PesanItem | null>(
     null,
   );
-  const [pesanList, setPesanList] = useState<PesanItem[]>(dummyPesan);
+
+  const [pesanList, setPesanList] = useState<PesanItem[]>(() => {
+    if (typeof window === "undefined") return dummyPesan;
+    const saved = localStorage.getItem("pesan");
+    return saved ? JSON.parse(saved) : dummyPesan;
+  });
   const [modalType, setModalType] = useState<ModalType>(null); // ← tambah
 
   const handleSubmit = (): void => {
     if (!nama || !pesan) {
-      setModalType("incomplete_wishes"); 
+      setModalType("incomplete_wishes");
       return;
     }
 
@@ -46,19 +51,12 @@ const Wishes = () => {
   };
 
   useEffect(() => {
-    const saved = localStorage.getItem("pesan");
-    if (saved) {
-      setPesanList(JSON.parse(saved));
-    }
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem("pesan", JSON.stringify(pesanList));
   }, [pesanList]);
 
   return (
     <>
-      <section className="relative w-full flex flex-col items-center px-8 bg-[#F7F4EF] pt-[61px] lg:pt-[100px] pb-[87px] lg:pb-[132px]">
+      <section id="wishes" className="relative w-full flex flex-col items-center px-8 bg-[#F7F4EF] pt-[61px] lg:pt-[100px] pb-[87px] lg:pb-[132px]">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -124,13 +122,12 @@ const Wishes = () => {
                     alt="Kirim"
                     width={24}
                     height={30}
-                    className="object-cover w-[15px] h-[19px] lg:w-[24px]"
+                    className="object-contain w-[17px] lg:w-[24px]"
                   />
                   Send
                 </button>
               </motion.div>
 
-              
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -164,42 +161,41 @@ const Wishes = () => {
                       </div>
                       <div className="sticky bottom-0 w-full h-[18px] bg-[#37546B] z-10" />
                     </div>
-                ) : (
-  <motion.div
-    variants={stagger}
-    initial="hidden"
-    animate="show"
-      transition={{ staggerChildren: 2.6 }}
-
-    className="w-full"
-  >
-    <div className="grid grid-cols-2 gap-[2vw] lg:gap-[1.5vw]">
-      {pesanList.map((item) => (
-        <motion.div
-          key={item.id}
-          variants={fadeIn}
-          transition={{ duration: 1.3, ease: "easeOut" }}
-          onClick={() => setSelectedMessage(item)}
-          className="rounded-md overflow-hidden shadow-md bg-[#F4F8F5] flex flex-col cursor-pointer"
-        >
-          <div className="p-[10px] relative flex-1 flex flex-col justify-center">
-            <p className="absolute top-[8px] left-[10px] text-[22px] font-bold font-quattrocento text-[#37546B]">
-              "
-            </p>
-            <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] text-center mt-6 mb-2 line-clamp-4">
-              {item.pesan}
-            </p>
-          </div>
-          <div className="bg-[#37546B] h-[35px] flex items-center justify-center px-6">
-            <p className="text-white text-center line-clamp-1 text-[13px] lg:text-[19px] font-quattrocento">
-              {item.nama}
-            </p>
-          </div>
-        </motion.div>
-      ))}
-    </div>
-  </motion.div>
-)}
+                  ) : (
+                    <motion.div
+                      variants={stagger}
+                      initial="hidden"
+                      animate="show"
+                      transition={{ staggerChildren: 2.6 }}
+                      className="w-full"
+                    >
+                      <div className="grid grid-cols-2 gap-[2vw] lg:gap-[1.5vw]">
+                        {pesanList.map((item) => (
+                          <motion.div
+                            key={item.id}
+                            variants={fadeIn}
+                            transition={{ duration: 1.3, ease: "easeOut" }}
+                            onClick={() => setSelectedMessage(item)}
+                            className="rounded-md overflow-hidden shadow-md bg-[#F4F8F5] flex flex-col cursor-pointer"
+                          >
+                            <div className="p-[10px] relative flex-1 flex flex-col justify-center">
+                              <p className="absolute top-[8px] left-[10px] text-[22px] font-bold font-quattrocento text-[#37546B]">
+                                "
+                              </p>
+                              <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] text-center mt-6 mb-2 line-clamp-4">
+                                {item.pesan}
+                              </p>
+                            </div>
+                            <div className="bg-[#37546B] h-[35px] flex items-center justify-center px-6">
+                              <p className="text-white text-center line-clamp-1 text-[13px] lg:text-[19px] font-quattrocento">
+                                {item.nama}
+                              </p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
                 </div>
               </motion.div>
 

@@ -84,7 +84,7 @@ const Rsvp = () => {
             >
               <p className="font-quattrocento text-[12px] lg:text-[18px] text-[#37546B] text-center mt-[24px] lg:mt-[48px]">
                 Kindly confirm your attendance before
-                <span className="block font-bold">16 May 2026</span>
+                <span className="block font-bold">11 June 2026</span>
               </p>
             </motion.div>
 

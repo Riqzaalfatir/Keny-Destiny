@@ -34,6 +34,34 @@ export default function Hero() {
         <motion.div
           variants={fadeIn}
           transition={{ duration: 1, ease: "easeIn" }}
+          className="absolute -translate-x-1/2 top-[178px] lg:top-[305px] left-[193px] lg:left-[291px] z-[2] w-[45px] lg:w-[79px]" 
+        >
+          <Image
+            src="/images/Hero/Emblem.svg"
+            alt="Amplop Utama"
+            width={79}
+            height={79}
+            className="w-full" 
+          />
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn}
+          transition={{ duration: 1, ease: "easeIn" }}
+          className="absolute -translate-x-1/2 top-[190px] lg:top-[327px] left-[193px] lg:left-[291px] z-[4] w-[19px] lg:w-[32px]" 
+        >
+          <Image
+            src="/images/Hero/K.svg"
+            alt="Amplop Utama"
+            width={32}
+            height={32}
+            className="w-full" 
+          />
+        </motion.div>
+
+        <motion.div
+          variants={fadeIn}
+          transition={{ duration: 1, ease: "easeIn" }}
           className="absolute top-[164px] right-[37px] lg:top-[280px] lg:right-[20px] w-[130px] lg:w-[223px]"
         >
           <Image src="/images/Hero/BungaBelakang.webp" alt="Bunga Belakang" width={223} height={223} className="w-full" />
@@ -123,7 +151,7 @@ export default function Hero() {
         >
           <Image src="/images/Hero/Wish.svg" alt="Wish" width={271} height={271} className="w-[149px] lg:w-[271px]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <a href="#gift" className="pointer-events-auto">
+            <a href="#wishes" className="pointer-events-auto">
               <p className="font-quattrocento text-[30px] lg:text-[52px] lg:mt-[18px] text-white">WISH</p>
             </a>
           </div>
