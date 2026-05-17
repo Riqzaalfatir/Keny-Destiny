@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 
 const IMAGES_TO_PRELOAD = [
+  // ASET HERO
   "/images/Hero/AmplopUtama.svg",
   "/images/Hero/Bungamawar.svg",
   "/images/Hero/BungaMawarKecil.svg",
@@ -16,18 +17,23 @@ const IMAGES_TO_PRELOAD = [
   "/images/Hero/OrnamentmawarKanann.png",
   "/images/Hero/MawarBiru.svg",
   "/images/Hero/OrnamentK.svg",
+  "/images/Hero/Emblem.svg",
+  "/images/Hero/K.svg",
+  "/images/Hero/BungaBelakang.webp",
+
+  // ASET OURSTORY
   "/images/OurStory/CouplePas1.webp",
   "/images/OurStory/CouplePas2.webp",
   "/images/OurStory/CouplePas3.webp",
-  "/images/ThankYou/BgThankYou.webp",
-  "/images/Hero/BungaBelakang.webp",
-  "/images/Hero/Emblem.svg",
-  "/images/Hero/K.svg",
 
+  // ASET OPENING
   "/images/Opening/Amplop.svg",
   "/images/Opening/Emblem.svg",
   "/images/Opening/BUNGAKIRIHD.png",
-  "/images/Opening/BUNGAKANANHD.png"
+  "/images/Opening/BUNGAKANANHD.png",
+
+  // ASET THANKYOU
+  "/images/ThankYou/BgThankYou.webp",
 ];
 
 export function usePreloader() {
@@ -35,26 +41,28 @@ export function usePreloader() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-  const total = IMAGES_TO_PRELOAD.length;
+    const total = IMAGES_TO_PRELOAD.length;
 
-  if (total === 0) {
-    setProgress(100);
-    setLoaded(true);
-    return;
-  }
+    if (total === 0) {
+      Promise.resolve().then(() => {
+        setProgress(100);
+        setLoaded(true);
+      });
+      return;
+    }
 
-  let count = 0;
+    let count = 0;
 
-  IMAGES_TO_PRELOAD.forEach((src) => {
-    const img = new window.Image();
-    img.src = src;
-    img.onload = img.onerror = () => {
-      count++;
-      setProgress(Math.round((count / total) * 100));
-      if (count === total) setLoaded(true);
-    };
-  });
-}, []);
+    IMAGES_TO_PRELOAD.forEach((src) => {
+      const img = new window.Image();
+      img.src = src;
+      img.onload = img.onerror = () => {
+        count++;
+        setProgress(Math.round((count / total) * 100));
+        if (count === total) setLoaded(true);
+      };
+    });
+  }, []);
 
   return { loaded, progress };
 }

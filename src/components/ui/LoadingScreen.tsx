@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 type Props = {
   progress: number;
@@ -7,15 +7,14 @@ type Props = {
 };
 
 export default function LoadingScreen({ progress, onDone }: Props) {
-  const [fading, setFading] = useState(false);
+  const fading = progress === 100;
 
   useEffect(() => {
     if (progress === 100) {
-      setFading(true);
-      const timer = setTimeout(() => onDone?.(), 600); // fade 600ms lalu panggil onDone
+      const timer = setTimeout(() => onDone?.(), 600);
       return () => clearTimeout(timer);
     }
-  }, [progress]);
+  }, [progress, onDone]);
 
   return (
     <div
@@ -35,7 +34,7 @@ export default function LoadingScreen({ progress, onDone }: Props) {
       </h1>
 
       <p className="font-quattrocento text-[13px] text-[#37546B]/70 mt-4">
-        Saturday, 11 July 2026
+        Thursday, 11 June 2026
       </p>
 
       <div

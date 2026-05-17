@@ -20,6 +20,7 @@ const WishesCard = ({ data, onClose }: WishesCardProps) => {
       onClick={onClose}
       className="fixed flex-col inset-0 flex items-center justify-center bg-black/60 backdrop-blur-sm z-50 px-4"
     >
+
       <motion.div
         initial={{ opacity: 0, scale: 0.85, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -36,12 +37,14 @@ const WishesCard = ({ data, onClose }: WishesCardProps) => {
           {data.pesan}
         </p>
       </motion.div>
+
       <button
         onClick={onClose}
         className="w-[320px] md:w-[350px] bg-[#37546B] hover:bg-[#2E4559] active:bg-[#243545] transition-colors duration-200 text-white px-6 py-2 rounded-xl text-[14px] font-quattrocento tracking-widest"
       >
         BACK
       </button>
+      
     </div>
   );
 };

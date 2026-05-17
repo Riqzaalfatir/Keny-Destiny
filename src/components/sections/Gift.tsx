@@ -169,7 +169,7 @@ const Gift = () => {
           className=" mt-[107px] lg:mt-[99px]"
         >
           <a
-            href=""
+            href="#hero"
             className="font-quattrocento underline text-[12px] lg:text-[18px] text-[#37546B]"
           >
             Return to envelope

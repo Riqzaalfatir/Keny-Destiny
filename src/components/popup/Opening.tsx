@@ -12,6 +12,7 @@ export default function Opening({ setStart }: Props) {
   return (
     <section className="fixed inset-0 z-[9998] flex items-center justify-center bg-[#F7F4EF] ">
       <div className="flex flex-col items-center justify-center text-center">
+        
         <motion.div
           variants={fadeIn}
           initial="hidden"

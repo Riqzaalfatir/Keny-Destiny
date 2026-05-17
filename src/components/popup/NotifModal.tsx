@@ -134,14 +134,14 @@ export const NOTIF_CONFIG: Record<string, NotifConfigItem> = {
     buttons: [{ label: "Close", variant: "outline", action: "close" }],
   },
   incomplete_wishes: {
-  icon: "!",
-  title: "INCOMPLETE WISHES",
-  messageid:
-    "Mohon lengkapi nama dan pesan sebelum mengirim. Beberapa informasi masih belum terisi.",
-  messageen:
-    "Please fill in your name and message before sending. Some required information is still missing.",
-  buttons: [{ label: "Close", variant: "outline", action: "close" }],
-},
+    icon: "!",
+    title: "INCOMPLETE WISHES",
+    messageid:
+      "Mohon lengkapi nama dan pesan sebelum mengirim. Beberapa informasi masih belum terisi.",
+    messageen:
+      "Please fill in your name and message before sending. Some required information is still missing.",
+    buttons: [{ label: "Close", variant: "outline", action: "close" }],
+  },
 };
 
 const WaIcon = () => (
@@ -170,11 +170,6 @@ const NotifModal = ({
   waNumber = "6281234567890",
 }: NotifModalProps) => {
   const config = NOTIF_CONFIG[type];
-  if (!type || !config) return null;
-
-  const handleBackdrop = (e: React.MouseEvent<HTMLDivElement>): void => {
-    if (e.target === e.currentTarget) onClose();
-  };
 
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -182,6 +177,12 @@ const NotifModal = ({
       document.body.style.overflow = "";
     };
   }, []);
+
+  if (!type || !config) return null;
+
+  const handleBackdrop = (e: React.MouseEvent<HTMLDivElement>): void => {
+    if (e.target === e.currentTarget) onClose();
+  };
 
   const handleAction = (action: ButtonAction): void => {
     if (action === "close") onClose();

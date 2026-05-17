@@ -100,7 +100,7 @@ const Details = () => {
             <motion.div variants={fadeUp} initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.25 }} transition={{ duration: 1.8, ease: "easeOut" }}   style={{ willChange: "transform" }} className="mt-[108px] lg:mt-[100px]"  
 >
               <a
-                href=""
+                href="#hero"
                 className="font-quattrocento underline text-[12px] lg:text-[18px] text-[#37546B] mt-[108px] lg:mt-[100px]"
               >
                 Return to envelope

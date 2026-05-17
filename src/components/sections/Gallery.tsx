@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback, useMemo } from "react";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -27,13 +27,12 @@ const Gallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number>(0);
   const scrollPosRef = useRef<number>(0);
 
-  const autoplayPlugin = useRef(
-    Autoplay({ delay: AUTOPLAY_DELAY, stopOnInteraction: false }),
+  const plugins = useMemo(
+    () => [Autoplay({ delay: AUTOPLAY_DELAY, stopOnInteraction: false })],
+    [],
   );
 
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    autoplayPlugin.current,
-  ]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, plugins);
 
   const handlePhotoClick = useCallback((index: number) => {
     scrollPosRef.current = window.scrollY;
@@ -48,31 +47,28 @@ const Gallery = () => {
     }, 10);
   };
 
- return (
+  return (
     <>
-      <section id="gallery" className="w-full h-[626px] min-h-[626px] max-h-[626px]  lg:h-[945px] lg:min-h-[945px] lg:max-h-[945px]">
-          <div
-            className="overflow-hidden w-full h-full"
-            ref={emblaRef}
-          >
-            <div className="flex h-full">
-              {photos.map((src, index) => (
-                <div
-                  key={index}
-                  className="relative flex-none w-screen h-full cursor-pointer"
-                  onClick={() => handlePhotoClick(index)}
-                >
-                  <Image
-                    src={src}
-                    alt={`Gallery photo ${index + 1}`}
-                    fill
-                    className="object-cover"
-                    priority={index === 0}
-                  />
-                </div>
-              ))}
-            </div>
+      <section id="gallery" className="w-full h-[626px] min-h-[626px] max-h-[626px] lg:h-[945px] lg:min-h-[945px] lg:max-h-[945px]">
+        <div className="overflow-hidden w-full h-full" ref={emblaRef}>
+          <div className="flex h-full">
+            {photos.map((src, index) => (
+              <div
+                key={index}
+                className="relative flex-none w-screen h-full cursor-pointer"
+                onClick={() => handlePhotoClick(index)}
+              >
+                <Image
+                  src={src}
+                  alt={`Gallery photo ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                />
+              </div>
+            ))}
           </div>
+        </div>
       </section>
 
       <Lightbox
